@@ -1,1 +1,1 @@
-# Portfolio2--JavaScrpit-Quiz
+# Portfolio2--JavaScript-Quiz
