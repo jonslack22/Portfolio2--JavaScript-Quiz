@@ -1,5 +1,3 @@
-// document.getElementById('endQuiz').style.visibility='hidden';
-
 //variables
 var quiz = [];
 quiz[0] = new Question("What is the first home console title that featured Waluigi as a playable character?", "Mario Tennis (Nintendo 64)", "Mario Kart 64", "Mario Party 3");
@@ -18,8 +16,7 @@ var answers = [];
 var currentScore = 0;
 
 document.addEventListener("DOMContentLoaded", function(){
-    // showQuizBtn.addEventListener('click', function(event){
-    // console.log("loading...")   
+    document.getElementById('endQuiz').style.visibility='hidden';
     btnProvideQuestion()
     })   
     
@@ -44,12 +41,12 @@ function btnProvideQuestion() {
 	randomQuestion = quiz[randomNumber]; 
   answers = [randomQuestion.rightAnswer, randomQuestion.wrongAnswer1, randomQuestion.wrongAnswer2];
   shuffle(answers);
-    if (quiz > 0) {
+    // if (quiz > 0) {
   quiz.splice(randomNumber, 1); //this ensures a question doesn't repeat
-  } else {
-    // document.getElementById('endQuiz').style.visibility='visible';
-  }
-  // document.getElementById("startQuiz").innerHTML;
+  // } else {
+  //   document.getElementById('endQuiz').style.visibility='visible';
+  // }
+
   document.getElementById("question").innerHTML= randomQuestion.question;
   document.getElementById("answerA").value= answers[0];
   document.getElementById("answerA").innerHTML= answers[0];
