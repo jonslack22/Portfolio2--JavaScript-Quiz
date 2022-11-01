@@ -40,6 +40,7 @@ function btnProvideQuestion() {
 	randomQuestion = quiz[randomNumber]; 
   answers = [randomQuestion.rightAnswer, randomQuestion.wrongAnswer1, randomQuestion.wrongAnswer2];
   shuffle(answers);
+  quiz.splice(randomNumber, 1);
   
   document.getElementById("question").innerHTML= randomQuestion.question;
   document.getElementById("answerA").value= answers[0];
