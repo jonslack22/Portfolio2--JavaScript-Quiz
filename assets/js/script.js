@@ -1,5 +1,5 @@
 //variables
-var quiz = [];
+let quiz = [];
 quiz[0] = new Question("What is the first home console title that featured Waluigi as a playable character?", "Mario Tennis (Nintendo 64)", "Mario Kart 64", "Mario Party 3");
 quiz[1] = new Question("Waluigi made his Mario Kart debut in the 2003 Nintendo Gamecube title 'Mario Kart: Double Dash' and has appeared in all but one of the series' subsequent Nintendo console games. Which title was he misisng from? ", "Mario Kart 3DS", "Mario Kart Wii", "Mario Kart 8 (Wii U)");
 quiz[2] = new Question("In Mario Party 8, what does Waluigi flaunt for his winning animation?", "A rose", "A trophy", "Nothing");
@@ -12,8 +12,8 @@ quiz[8] = new Question("In Mario Kart Tour, as part of the 2021 Halloween Tour, 
 quiz[9] = new Question("As a playable character in many of the Mario Golf games, what shot trajectory has Waluigi often been associated with?", "Draw (right to left)", "Fade (left to right)", "Straight");
 quiz[10] = new Question("As of November 2022, what is Waluigi's most recent home console video game appearance?", "Mario Strikers: Battle League", "Mario Party Superstars", "Mario Golf: Super Rush");
 
-var answers = [];
-var currentScore = 0;
+let answers = [];
+let currentScore = 0;
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   btnProvideQuestion();
@@ -29,14 +29,14 @@ function Question(question,rightAnswer,wrongAnswer1,wrongAnswer2) {
 
 //this function ensures that the right answer, as defined in 'function Question', is not always the first displayed answer
 function shuffle(o) {
-	for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+	for(let j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 	return o;
 };
 
-//generates a question from the available list on a button click
 function btnProvideQuestion() { 
   
-	var randomNumber = Math.floor(Math.random()*quiz.length);
+  //generates a question from the available list on a button click
+	let randomNumber = Math.floor(Math.random()*quiz.length);
 	randomQuestion = quiz[randomNumber]; 
   answers = [randomQuestion.rightAnswer, randomQuestion.wrongAnswer1, randomQuestion.wrongAnswer2];
   shuffle(answers);
@@ -53,15 +53,15 @@ function btnProvideQuestion() {
 
 //check to see if the clicked answer is the correct one
 function answerA_clicked() {
-  var answerA = document.getElementById("answerA").value;
+  let answerA = document.getElementById("answerA").value;
   	checkAnswer(answerA);
 }
 function answerB_clicked() {
-		var answerB = document.getElementById("answerB").value;
+		let answerB = document.getElementById("answerB").value;
   checkAnswer(answerB);
 }
 function answerC_clicked() {
-    var answerC = document.getElementById("answerC").value;
+    let answerC = document.getElementById("answerC").value;
   checkAnswer(answerC);
 }
 
@@ -76,7 +76,7 @@ function adjustScore(isCorrect) {
   document.getElementById("score").innerHTML = currentScore;
 }
 
-//the message that displays when you chhose an answer
+//the message that displays when you choose an answer
 function checkAnswer(answer) {  
   if (answer == randomQuestion.rightAnswer) {
     alert("Congratulations! You got it right!")
