@@ -41,11 +41,6 @@ function btnProvideQuestion() {
 	randomQuestion = quiz[randomNumber]; 
   answers = [randomQuestion.rightAnswer, randomQuestion.wrongAnswer1, randomQuestion.wrongAnswer2];
   shuffle(answers);
-    if (quiz.length > 0) {
-  quiz.splice(randomNumber, 1); //this ensures a question doesn't repeat
-  } else {
-    document.getElementById('endQuiz').style.visibility='visible';
-  }
 
   document.getElementById("question").innerHTML= randomQuestion.question;
   document.getElementById("answerA").value= answers[0];
@@ -86,10 +81,21 @@ function checkAnswer(answer) {
   if (answer == randomQuestion.rightAnswer) {
     alert("Congratulations! You got it right!")
     adjustScore(true);
+    checkRemainingQuestions();
     btnProvideQuestion();
   } else { 
     alert("That's the wrong answer. Wahhhhhh....");
     adjustScore(false);
+    checkRemainingQuestions();
     btnProvideQuestion();
   }	  
+}
+
+function checkRemainingQuestions() {
+  if (quiz.length > 0) {
+    quiz.splice(randomNumber, 1); //this ensures a question doesn't repeat
+    btnProvideQuestion();
+    } else {
+      document.getElementById('endQuiz').style.visibility='visible';
+    }
 }
