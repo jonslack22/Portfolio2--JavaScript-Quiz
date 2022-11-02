@@ -17,7 +17,7 @@ var currentScore = 0;
 
 document.addEventListener("DOMContentLoaded", function(){
     document.getElementById('endQuiz').style.visibility='hidden';
-    btnProvideQuestion()
+    checkRemainingQuestions();
     })   
     
 //this is the structure of the question
@@ -28,17 +28,14 @@ function Question(question,rightAnswer,wrongAnswer1,wrongAnswer2) {
     this.wrongAnswer2 = wrongAnswer2;
 };
 
-//this function ensures that the right answer, as defined in 'function Question', is not always the first displayed answer
+//ensures that the right answer, as defined in 'function Question', is not always the first displayed answer
 function shuffle(o) {
 	for(let j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 	return o;
 };
 
-function btnProvideQuestion() { 
-  
-  //generates a question and its answers from the available list on a button click
-	var randomNumber = Math.floor(Math.random()*quiz.length);
-	randomQuestion = quiz[randomNumber]; 
+//generates a random question and shuffled answers on a button click
+function btnProvideQuestion(randomQuestion) { 
   answers = [randomQuestion.rightAnswer, randomQuestion.wrongAnswer1, randomQuestion.wrongAnswer2];
   shuffle(answers);
 
@@ -82,19 +79,20 @@ function checkAnswer(answer) {
     alert("Congratulations! You got it right!")
     adjustScore(true);
     checkRemainingQuestions();
-    btnProvideQuestion();
   } else { 
     alert("That's the wrong answer. Wahhhhhh....");
     adjustScore(false);
     checkRemainingQuestions();
-    btnProvideQuestion();
   }	  
 }
 
+//this ensures a question is generated randomly
 function checkRemainingQuestions() {
   if (quiz.length > 0) {
+    var randomNumber = Math.floor(Math.random()*quiz.length);
+	  randomQuestion = quiz[randomNumber]; 
     quiz.splice(randomNumber, 1); //this ensures a question doesn't repeat
-    btnProvideQuestion();
+    btnProvideQuestion(randomQuestion);
     } else {
       document.getElementById('endQuiz').style.visibility='visible';
     }
