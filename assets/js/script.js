@@ -41,11 +41,11 @@ function btnProvideQuestion() {
 	randomQuestion = quiz[randomNumber]; 
   answers = [randomQuestion.rightAnswer, randomQuestion.wrongAnswer1, randomQuestion.wrongAnswer2];
   shuffle(answers);
-    // if (quiz > 0) {
+    if (quiz.length > 0) {
   quiz.splice(randomNumber, 1); //this ensures a question doesn't repeat
-  // } else {
-  //   document.getElementById('endQuiz').style.visibility='visible';
-  // }
+  } else {
+    document.getElementById('endQuiz').style.visibility='visible';
+  }
 
   document.getElementById("question").innerHTML= randomQuestion.question;
   document.getElementById("answerA").value= answers[0];
