@@ -1,19 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poor+Story&family=Rubik+Bubbles&display=swap');
+
+body {
+  background-color: rgb(245, 220, 224);
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  background-color: blueviolet;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Poor Story', cursive;
+  text-align: center;
+}
+
 .flex {display:flex;}
 
 .field {
   min-width: 200px;
   min-height: 30px;
   margin: 10px;
+  font-family: 'Rubik Bubbles', cursive;
 }
 
 button {
   height: 40px;
   width: 200px;
   outline: none;
-  background: white;
+  background: yellow;
   border: black solid 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-style: double; 
 }
 
 button:active {
-  background: blue;
+  background: purple;
 }
