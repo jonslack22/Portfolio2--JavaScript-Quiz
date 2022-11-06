@@ -1,5 +1,5 @@
 //variables
-var quiz = [];
+let quiz = [];
 quiz[0] = new Question("What is the first home console title that featured Waluigi as a playable character?", "Mario Tennis (Nintendo 64)", "Mario Kart 64", "Mario Party 3");
 quiz[1] = new Question("Waluigi made his Mario Kart debut in the 2003 Nintendo Gamecube title 'Mario Kart: Double Dash' and has appeared in all but one of the series' subsequent Nintendo console games. Which title was he misisng from? ", "Mario Kart 3DS", "Mario Kart Wii", "Mario Kart 8 (Wii U)");
 quiz[2] = new Question("In Mario Party 8, what does Waluigi flaunt for his winning animation?", "A rose", "A trophy", "Nothing");
@@ -12,13 +12,13 @@ quiz[8] = new Question("In Mario Kart Tour, as part of the 2021 Halloween Tour, 
 quiz[9] = new Question("As a playable character in many of the Mario Golf games, what shot trajectory has Waluigi often been associated with?", "Draw (right to left)", "Fade (left to right)", "Straight");
 quiz[10] = new Question("As of November 2022, what is Waluigi's most recent home console video game appearance?", "Mario Strikers: Battle League", "Mario Party Superstars", "Mario Golf: Super Rush");
 
-var answers = [];
-var currentScore = 0;
+let answers = [];
+let currentScore = 0;
 
 document.addEventListener("DOMContentLoaded", function(){
     document.getElementById('endQuiz').style.visibility='hidden';
     checkRemainingQuestions();
-    })   
+    });   
     
 //this is the structure of the question
 function Question(question,rightAnswer,wrongAnswer1,wrongAnswer2) {
@@ -26,13 +26,13 @@ function Question(question,rightAnswer,wrongAnswer1,wrongAnswer2) {
     this.rightAnswer = rightAnswer;
     this.wrongAnswer1 = wrongAnswer1;
     this.wrongAnswer2 = wrongAnswer2;
-};
+}
 
 //ensures that the right answer, as defined in 'function Question', is not always the first displayed answer
 function shuffle(o) {
 	for(let j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 	return o;
-};
+}
 
 //generates a random question and shuffled answers on a button click
 function btnProvideQuestion(randomQuestion) { 
@@ -76,7 +76,7 @@ function adjustScore(isCorrect) {
 //the message that displays when you choose an answer
 function checkAnswer(answer) {  
   if (answer == randomQuestion.rightAnswer) {
-    alert("Congratulations! You got it right!")
+    alert("Congratulations! You got it right!");
     adjustScore(true);
     checkRemainingQuestions();
   } else { 
@@ -89,7 +89,7 @@ function checkAnswer(answer) {
 //this ensures a question is generated randomly
 function checkRemainingQuestions() {
   if (quiz.length > 0) {
-    var randomNumber = Math.floor(Math.random()*quiz.length);
+    let randomNumber = Math.floor(Math.random()*quiz.length);
 	  randomQuestion = quiz[randomNumber]; 
     quiz.splice(randomNumber, 1); //this ensures a question doesn't repeat
     btnProvideQuestion(randomQuestion);
