@@ -8,7 +8,7 @@ quiz[4] = new Question("Featuring in Mario Kart DS, Mario Kart 3DS, Mario Kart T
 quiz[5] = new Question("Waluigi is traditionally seen as the primary rival to which character?", "Luigi", "Mario", "Wario");
 quiz[6] = new Question("What is the traditional colour of Waluigi's undershirt and headwear?", "Purple", "Green", "Yellow");
 quiz[7] = new Question("Waluigi is a playable character in which of the following Super Smash Bros series entries?", "Waluigi is not a playable character in these games", "Super Smash Bros for Nintendo 3DS/Wii U", "Super Smash Bros Ultimate");
-quiz[8] = new Question("In Mario Kart Tour, as part of the 2021 Halloween Tour, a variant of Waluigi was introdcued as a playable character. What is the nature of this character?", "He's a Vampire", "He's a Werewolf", "He's a Zombie");
+quiz[8] = new Question("In Mario Kart Tour, as part of the 2021 Halloween Tour, a variant of Waluigi was introduced as a playable character. What is the nature of this character?", "He's a Vampire", "He's a Werewolf", "He's a Zombie");
 quiz[9] = new Question("As a playable character in many of the Mario Golf games, what shot trajectory has Waluigi often been associated with?", "Draw (right to left)", "Fade (left to right)", "Straight");
 quiz[10] = new Question("As of November 2022, what is Waluigi's most recent home console video game appearance?", "Mario Strikers: Battle League", "Mario Party Superstars", "Mario Golf: Super Rush");
 
