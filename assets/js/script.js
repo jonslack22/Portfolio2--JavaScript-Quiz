@@ -18,6 +18,7 @@ let currentScore = 0;
 document.addEventListener("DOMContentLoaded", function(){
     document.getElementById('endQuiz').style.visibility='hidden';
     document.getElementById('quizscore').style.visibility='hidden';
+    document.getElementById('tohomepage').style.visibility='hidden';
     checkRemainingQuestions();
     });   
     
@@ -72,7 +73,7 @@ function adjustScore(isCorrect) {
     currentScore+ 0;
   }
   localStorage.setItem("currentScore", currentScore); 
-  document.getElementById("score").innerHTML = localStorage.getItem("currentScore");
+  document.getElementById("score").innerHTML = localStorage.getItem("currentScore");//this ensures the browser saves the score with no expiration
 }
 
 //the message that displays when you choose an answer
@@ -110,12 +111,14 @@ function checkRemainingQuestions() {
     quiz.splice(randomNumber, 1); //this ensures a question doesn't repeat
     btnProvideQuestion(randomQuestion);
     } else {
-      document.getElementById('endQuiz').style.visibility='visible';
+      document.getElementById('quiz').style.visibility='hidden';
+      endQuiz();
     }
 }
 
 function endQuiz() {
-  let quizScore = document.getElementById('quizscore').style.visibility='visible';
-  // let finalScore = document.getElementById('finalscore').innerHTML = localStorage.getItem(currentScore);
+  document.getElementById('quizscore').style.visibility='visible';
+  document.getElementById("finalscore").innerHTML = localStorage.getItem("currentScore");
+  document.getElementById('tohomepage').style.visibility='visible';
 }
 

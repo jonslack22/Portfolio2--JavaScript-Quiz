@@ -11,7 +11,7 @@ h1 {
   text-align: center;
 }
 
-h2 {
+h2, p {
   font-family: 'Poor Story', sans-serif, cursive;
   text-align: center;
 }
@@ -34,13 +34,25 @@ h2 {
   background-color: rgb(195, 227, 240);
 }
 
+#finalscore {
+  min-width: 100px;
+  min-height: 30px;
+  margin-top: 15px;
+  font-family: 'Rubik', sans-serif, cursive;
+  font-size: large;
+  display: inline-block;
+  box-shadow: inset -2px -2px 0px 5px rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgb(195, 227, 240);
+}
+
 button {
   height: 50px;
   width: 200px;
   outline: none;
   background: yellow;
   border: black solid 2px;
-  text-transform: uppercase;
   font-size: small;
   font-weight: bold; 
 }
