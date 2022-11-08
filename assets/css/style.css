@@ -37,5 +37,5 @@ button {
 }
 
 button:active {
-  background: purple;
+  background: rgb(143, 163, 248);
 }

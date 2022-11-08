@@ -8,6 +8,7 @@
     <title>The Waluigi Quiz</title>
 </head>
 <body>
+  <h1>Welcome to the most WAH-nderful Waluigi Quiz!</h1>
     <div id="quiz">
         <div class="flex">
             <div class="field">Score</div>
@@ -29,17 +30,16 @@
             <div class="field">C</div>
             <button id="answerC" onclick="answerC_clicked()"></button>
           </div>
-    </div>  
+    </div>
+    <audio id="rightAudio">
+      <source src="assets/waluigi1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wrongAudio">
+      <source src="assets/waluigi2.mp3" type="audio/mpeg">
+    </audio>  
         <div id="endDiv">    
-          <button id="endQuiz" onclick="document.location='index.html'">Finish!</button>
+        <button id="endQuiz" onclick="document.location='index.html'">Finish!</button>
         </div>  
-         <!-- <div class="closing-heading">
-        <h2>Thank you for playing this awesome quiz!</h2>
-        <h2>I hope you enjoyed it!</h2>
-        
-            <p>Your final score is:</p>
-            <p id="score"></p> -->
-        </div>
         <script src="assets/js/script.js"></script>            
 </body>
 </html>

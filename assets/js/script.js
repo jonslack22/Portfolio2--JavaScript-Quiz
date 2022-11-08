@@ -1,7 +1,7 @@
 //variables
 let quiz = [];
 quiz[0] = new Question("What is the first home console title that featured Waluigi as a playable character?", "Mario Tennis (Nintendo 64)", "Mario Kart 64", "Mario Party 3");
-quiz[1] = new Question("Waluigi made his Mario Kart debut in the 2003 Nintendo Gamecube title 'Mario Kart: Double Dash' and has appeared in all but one of the series' subsequent Nintendo console games. Which title was he misisng from? ", "Mario Kart 3DS", "Mario Kart Wii", "Mario Kart 8 (Wii U)");
+quiz[1] = new Question("Waluigi made his Mario Kart debut in the 2003 Nintendo Gamecube title 'Mario Kart: Double Dash' and has appeared in all but one of the series' subsequent Nintendo console games. Which title was he missing from? ", "Mario Kart 3DS", "Mario Kart Wii", "Mario Kart 8 (Wii U)");
 quiz[2] = new Question("In Mario Party 8, what does Waluigi flaunt for his winning animation?", "A rose", "A trophy", "Nothing");
 quiz[3] = new Question("In Mario Kart: Double Dash, what is the name of Waluigi's personal kart?", "Waluigi Racer", "Zipper", "Gold Mantis");
 quiz[4] = new Question("Featuring in Mario Kart DS, Mario Kart 3DS, Mario Kart Tour and most recently Mario Kart 8 Deluxe, what is the name of Waluigi's self-titled race course?", "Waluigi Pinball", "Waluigi Stadium", "Waluigi Circuit");
@@ -76,14 +76,28 @@ function adjustScore(isCorrect) {
 //the message that displays when you choose an answer
 function checkAnswer(answer) {  
   if (answer == randomQuestion.rightAnswer) {
+    audioCorrect();
     alert("Congratulations! You got it right!");
     adjustScore(true);
     checkRemainingQuestions();
   } else { 
+    audioIncorrect();
     alert("That's the wrong answer. Wahhhhhh....");
     adjustScore(false);
     checkRemainingQuestions();
-  }	  
+  }
+}
+
+//sound effect that plays with the right answer
+function audioCorrect() {
+  let audio = document.getElementById("rightAudio");
+  audio.play();
+}
+
+//sound effect that plays with a wrong answer
+function audioIncorrect() {
+  let audio = document.getElementById("wrongAudio");
+  audio.play();
 }
 
 //this ensures a question is generated randomly
