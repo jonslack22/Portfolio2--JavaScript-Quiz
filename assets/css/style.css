@@ -32,10 +32,9 @@ button {
   background: yellow;
   border: black solid 2px;
   text-transform: uppercase;
-  font-weight: bold;
-  border-style: double; 
+  font-weight: bold; 
 }
 
 button:active {
-  background: rgb(143, 163, 248);
+  background: rgb(195, 227, 240);
 }
