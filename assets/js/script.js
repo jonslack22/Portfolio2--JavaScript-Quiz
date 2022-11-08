@@ -64,7 +64,7 @@ function answerC_clicked() {
 
 //updates the correct score display
 function adjustScore(isCorrect) {
-  debugger;
+  // debugger;
   if (isCorrect) {
     currentScore++;
   } else {

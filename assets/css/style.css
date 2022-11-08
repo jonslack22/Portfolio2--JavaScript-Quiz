@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poor+Story&family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poor+Story&family=Rubik&display=swap');
 
 body {
   background-color: rgb(245, 220, 224);
@@ -6,23 +6,23 @@ body {
 }
 
 h1 {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Permanent Marker', sans-serif, cursive;
   background-color: blueviolet;
   text-align: center;
 }
 
 h2 {
-  font-family: 'Poor Story', cursive;
+  font-family: 'Poor Story', sans-serif, cursive;
   text-align: center;
 }
 
-.flex {display:flex;}
+.flex {display:block;}
 
 .field {
   min-width: 200px;
   min-height: 30px;
   margin: 10px;
-  font-family: 'Rubik Bubbles', cursive;
+  font-family: 'Rubik', sans-serif, cursive;
 }
 
 button {
@@ -37,4 +37,8 @@ button {
 
 button:active {
   background: rgb(195, 227, 240);
+}
+
+#endquiz {
+  padding: 50px;
 }
