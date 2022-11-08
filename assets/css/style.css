@@ -23,6 +23,7 @@ h2 {
   min-height: 30px;
   margin: 10px;
   font-family: 'Rubik', sans-serif, cursive;
+  font-size: large;
 }
 
 button {
@@ -32,6 +33,7 @@ button {
   background: yellow;
   border: black solid 2px;
   text-transform: uppercase;
+  font-size: small;
   font-weight: bold; 
 }
 
@@ -41,4 +43,9 @@ button:active {
 
 #endquiz {
   padding: 50px;
+}
+
+#waluigi {
+  max-width: 100%;
+  height: auto;
 }

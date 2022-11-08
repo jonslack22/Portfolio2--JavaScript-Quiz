@@ -17,6 +17,7 @@ let currentScore = 0;
 
 document.addEventListener("DOMContentLoaded", function(){
     document.getElementById('endQuiz').style.visibility='hidden';
+    document.getElementById('quizscore').style.visibility='hidden';
     checkRemainingQuestions();
     });   
     
