@@ -16,7 +16,6 @@ let answers = [];
 let currentScore = 0;
 
 document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById('endQuiz').style.visibility='hidden';
     document.getElementById('quizscore').style.visibility='hidden';
     document.getElementById('tohomepage').style.visibility='hidden';
     checkRemainingQuestions();
