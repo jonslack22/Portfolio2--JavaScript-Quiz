@@ -71,7 +71,8 @@ function adjustScore(isCorrect) {
   } else {
     currentScore+ 0;
   }
-  document.getElementById("score").innerHTML = currentScore;
+  localStorage.setItem("currentScore", currentScore); 
+  document.getElementById("score").innerHTML = localStorage.getItem("currentScore");
 }
 
 //the message that displays when you choose an answer
@@ -117,3 +118,4 @@ function endQuiz() {
   let quizScore = document.getElementById('quizscore').style.visibility='visible';
   // let finalScore = document.getElementById('finalscore').innerHTML = localStorage.getItem(currentScore);
 }
+

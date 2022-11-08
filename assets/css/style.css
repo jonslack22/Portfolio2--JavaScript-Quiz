@@ -19,15 +19,23 @@ h2 {
 .flex {display:block;}
 
 .field {
-  min-width: 200px;
+  min-width: 100px;
   min-height: 30px;
-  margin: 10px;
+  margin-top: 15px;
   font-family: 'Rubik', sans-serif, cursive;
   font-size: large;
 }
 
+#score {
+  display: inline-block;
+  box-shadow: inset -2px -2px 0px 5px rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgb(195, 227, 240);
+}
+
 button {
-  height: 40px;
+  height: 50px;
   width: 200px;
   outline: none;
   background: yellow;
@@ -37,12 +45,18 @@ button {
   font-weight: bold; 
 }
 
+button:hover {
+  cursor: pointer;
+  background: rgb(119, 119, 25);
+}
+
 button:active {
   background: rgb(195, 227, 240);
 }
 
-#endquiz {
-  padding: 50px;
+#endQuiz {
+  border: black ridge 8px;
+  margin-top: 30px;
 }
 
 #waluigi {
