@@ -112,3 +112,8 @@ function checkRemainingQuestions() {
       document.getElementById('endQuiz').style.visibility='visible';
     }
 }
+
+function endQuiz() {
+  let quizScore = document.getElementById('quizscore').style.visibility='visible';
+  // let finalScore = document.getElementById('finalscore').innerHTML = localStorage.getItem(currentScore);
+}
