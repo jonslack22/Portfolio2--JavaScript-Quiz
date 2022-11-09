@@ -1,4 +1,4 @@
-//variables
+//major variables
 let quiz = [];
 quiz[0] = new Question("What is the first home console title that featured Waluigi as a playable character?", "Mario Tennis (Nintendo 64)", "Mario Kart 64", "Mario Party 3");
 quiz[1] = new Question("Waluigi made his Mario Kart debut in the 2003 Nintendo Gamecube title 'Mario Kart: Double Dash' and has appeared in all but one of the series' subsequent Nintendo console games. Which title was he missing from? ", "Mario Kart 3DS", "Mario Kart Wii", "Mario Kart 8 (Wii U)");
@@ -115,6 +115,7 @@ function checkRemainingQuestions() {
     }
 }
 
+//the final message, score display and a homepage button
 function endQuiz() {
   document.getElementById('quizscore').style.visibility='visible';
   document.getElementById("finalscore").innerHTML = localStorage.getItem("currentScore");
