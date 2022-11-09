@@ -10,37 +10,37 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>The Waluigi Quiz</title>
 </head>
-<body>
+  <body>
     <h1>Welcome to the most WAH-nderful Waluigi Quiz!</h1>
-        <div id="quiz">
-            <div class="flex">
-                <div class="field">Score</div>
-                <div id="score" class="field">0</div>
-            </div>
-            <div class="flex">
-                <div class="field">Question</div>
-                <div id="question" class="field"></div>
-            </div>
-            <div class="flex">
-                <div class="field">A</div>
-                <button id="answerA" onclick="answerA_clicked()"></button>
-            </div>
-            <div class="flex">
-                <div class="field">B</div>
-                <button id="answerB" onclick="answerB_clicked()"></button>
-            </div>
-            <div class="flex">
-                <div class="field">C</div>
-                <button id="answerC" onclick="answerC_clicked()"></button>
-            </div>
+      <div id="quiz"> <!--This element is visible by default until all questions are answered --> 
+        <div class="flex">
+          <div class="field">Score</div>
+            <div id="score" class="field">0</div>
         </div>
+        <div class="flex">
+          <div class="field">Question</div>
+            <div id="question" class="field"></div>
+        </div>
+        <div class="flex">
+          <div class="field">A</div>
+            <button id="answerA" onclick="answerA_clicked()"></button>
+        </div>
+        <div class="flex">
+          <div class="field">B</div>
+            <button id="answerB" onclick="answerB_clicked()"></button>
+        </div>
+        <div class="flex">
+          <div class="field">C</div>
+            <button id="answerC" onclick="answerC_clicked()"></button>
+        </div>
+      </div>
     <audio id="rightAudio">
-        <source src="assets/sounds/waluigi1.mp3" type="audio/mpeg">
+      <source src="assets/sounds/waluigi1.mp3" type="audio/mpeg">
     </audio>
     <audio id="wrongAudio">
-        <source src="assets/sounds/waluigi2.mp3" type="audio/mpeg">
+      <source src="assets/sounds/waluigi2.mp3" type="audio/mpeg">
     </audio>     
-        <div id ="quizscore">
+         <div id ="quizscore"> <!--This element will take the place of the quiz after all questions are answered -->
             <h2>You finished the quiz!</h2>
         
             <h2>Your final score is:</h2>
@@ -48,6 +48,6 @@
             <h2>Be sure to tell your friends about this WAH-nderful quiz!</h2>    
         </div>
         <button id="tohomepage" onclick="document.location='index.html'">Home</button>
-        <script src="assets/js/script.js"></script>            
-</body>
+    <script src="assets/js/script.js"></script>            
+  </body>
 </html>

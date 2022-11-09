@@ -5,11 +5,13 @@ body {
   text-align: center;
 }
 
-#waluigi {
+/* styling for the homepage image */
+#waluigi { 
   max-width: 100%;
   height: auto;
 }
 
+/* general text styling */
 h1 {
   font-family: 'Permanent Marker', sans-serif, cursive;
   background-color: blueviolet;
@@ -23,6 +25,7 @@ h2, p {
   font-size: xx-large;
 }
 
+/* styling for the quiz */
 .flex {display:block;}
 
 .field {
