@@ -5,10 +5,16 @@ body {
   text-align: center;
 }
 
+#waluigi {
+  max-width: 100%;
+  height: auto;
+}
+
 h1 {
   font-family: 'Permanent Marker', sans-serif, cursive;
   background-color: blueviolet;
   text-align: center;
+  font-size: xxx-large;
 }
 
 h2, p {
@@ -23,7 +29,7 @@ h2, p {
   min-height: 30px;
   margin-top: 15px;
   font-family: 'Rubik', sans-serif, cursive;
-  font-size: large;
+  font-size: x-large;
 }
 
 #score {
@@ -48,12 +54,12 @@ h2, p {
 }
 
 button {
-  height: 50px;
+  height: 65px;
   width: 200px;
   outline: none;
   background: yellow;
   border: black solid 2px;
-  font-size: small;
+  font-size: medium;
   font-weight: bold; 
 }
 
@@ -69,9 +75,4 @@ button:active {
 #endQuiz {
   border: black ridge 8px;
   margin-top: 30px;
-}
-
-#waluigi {
-  max-width: 100%;
-  height: auto;
 }
