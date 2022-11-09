@@ -120,4 +120,3 @@ function endQuiz() {
   document.getElementById("finalscore").innerHTML = localStorage.getItem("currentScore");
   document.getElementById('tohomepage').style.visibility='visible';
 }
-

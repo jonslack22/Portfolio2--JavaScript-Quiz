@@ -20,6 +20,7 @@ h1 {
 h2, p {
   font-family: 'Poor Story', sans-serif, cursive;
   text-align: center;
+  font-size: xx-large;
 }
 
 .flex {display:block;}
@@ -70,6 +71,11 @@ button:hover {
 
 button:active {
   background: rgb(195, 227, 240);
+}
+
+#quizscore, #tohomepage {
+  position: relative;
+  bottom: 300px;
 }
 
 #endQuiz {
