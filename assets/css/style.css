@@ -25,7 +25,19 @@ h2, p {
   font-size: xx-large;
 }
 
-h3 {
+#instructions {
+  font-family: 'Rubik', sans-serif, cursive;
+  text-align: center;
+  font-size: large;
+}
+
+#index-footer {
+  font-family: 'Poor Story', sans-serif, cursive;
+  text-align: left;
+  font-size: x-large;
+}
+
+#quiz-footer {
   font-family: 'Poor Story', sans-serif, cursive;
   text-align: center;
   font-size: x-large;
