@@ -2,7 +2,7 @@
 
 ## Code Institute - Milestone Project 2
 
-![The Waluigi Quiz Interactive Deisgn](https://github.com/jonslack22/Portfolio2--JavaScript-Quiz/blob/main/waluigi_quiz_responsive.png)
+![The Waluigi Quiz Interactive Deisgn](https://github.com/jonslack22/Portfolio2--JavaScript-Quiz/blob/main/assets/images/waluigi_quiz_responsive.png)
 
 *The Waluigi Quiz* is a JavaScript based quiz that tests the user's knowledge of a playable side character in numerous Nintendo multiplayer video game titles, Waluigi. The idea for the quiz came to me as a fan of the cult status Waluigi has achieved in the video gaming fandom. Starting out as a character created to fill a void in the 1998 Mario Tennis, Waluigi has gone on to appear in numerous 'Mario' spin-off titles since, providing frequent comic relief and occasionally playing the role of a minor antagonist in some games. Notably, he has not headlined in his own game, and so exists in greater obscurity to much of the video gaming population.
 
