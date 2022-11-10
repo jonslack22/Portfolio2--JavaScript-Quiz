@@ -12,6 +12,7 @@
 </head>
   <body>
     <h1>Welcome to the most WAH-nderful Waluigi Quiz!</h1>
+    <main>  
       <div id="quiz"> <!--This element is visible by default until all questions are answered --> 
         <div class="flex">
           <div class="field">Score</div>
@@ -34,6 +35,7 @@
             <button id="answerC" onclick="answerC_clicked()"></button>
         </div>
       </div>
+    </main>  
     <audio id="rightAudio">
       <source src="assets/sounds/waluigi1.mp3" type="audio/mpeg">
     </audio>
@@ -44,10 +46,13 @@
             <h2>You finished the quiz!</h2>
         
             <h2>Your final score is:</h2>
-            <h2 id="finalscore"></h2>
+            <h2 id="finalscore">Total Score = 0</h2>
             <h2>Be sure to tell your friends about this WAH-nderful quiz!</h2>    
         </div>
         <button id="tohomepage" onclick="document.location='index.html'">Home</button>
+        <footer>*The Waluigi Quiz* 
+          by Jonathan Slack, 2022
+        </footer>
     <script src="assets/js/script.js"></script>            
   </body>
 </html>

@@ -25,6 +25,12 @@ h2, p {
   font-size: xx-large;
 }
 
+h3 {
+  font-family: 'Poor Story', sans-serif, cursive;
+  text-align: center;
+  font-size: x-large;
+}
+
 /* styling for the quiz */
 .flex {display:block;}
 
