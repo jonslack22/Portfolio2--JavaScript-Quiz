@@ -10,6 +10,36 @@ Though a dedicated page detailing Waluigi's history, inspiration, general inform
 
 This is the second of five projects that comprise the Full Stack Software Development course ran by *Code Institute*. This project required the use of HTML, CSS3 and JavaScript to build a responsive and static website, with manipulation of the HTML Document Model (DOM) as a mandatory requirement.
 
+## Defining the UX
+
+### Primary Goals
+
+ - I wanted to make a quiz that could give people who were largely unfamiliar with Waluigi a chance to learn something about him via a repeatable JavaScript quiz, and to test the knowledge of those more familiar with Waluigi and the Nintendo video game spin-off titles he features in without people having to read through a long wikipedia style article.
+
+ - I wanted to make a quiz with elements that captures some of the essence of the character of Waluigi.
+
+ - To make a quiz with elements that are responsive and static across computers, tablets and phones.
+
+### User Stories
+
+1. I am someone who has recently encountered Waluigi in a multiplayer Nintendo game and I am curious in seeking information regarding his history.
+
+2. I am a longtime fan of the Nintendo multiplayer games he features in, and I wish to test my knowledge of these.
+
+3. I am someone who appreciates the character of Waluigi as depcited in the games he features in and on Nintendo website posts, and want to have fun in completing a quiz centered around him.
+
+### Project Design
+
+1. I immediately began a wireframe design for the quiz using the downloadable desktop app for [Balsamiq](https://balsamiq.com/wireframes/desktop/) after defining the primary goals and user stories for the project in my mind. Note that the wireframe itself does not depict two seperate pages for the site as does the final project; this design choice was not made until later on in the project's development.
+
+2. The project's colour scheme is entirely derived from most of the colours that define Waluigi: black (Waluigi's moustache colour is the same as the HTML and JavaScript button text), purple (the headline of each page shares a colour with his clothes and hat), yellow (the colour of the upside down 'L' on Waluigi's hat is used for the site and quiz buttons), white (the alert message background is the colour of Waluigi's gloves), pink (Waluigi's nose is similar in colour to the background used across the project) and a very light shade of blue (the score display boxes and site buttons after clicking are a similar colour to the outer edge of Waluigi's eyes). A lighter shade of pink was used to contrast more effectively against the shade of purple used for the headline text and main image. The colour scheme was decided upon after completion of the wireframe.
+
+3. I stuck to three different font styles from Google Fonts for the whole project: Permanent Marker, Poor Story and Rubik. The latter was chosen as a generic font style for quiz buttons and the instruction text. The other two, in my view, capture the chaotic and amusing nature of the character effectively.
+
+4. I strove to keep the visual design of the project simple and basic, so as not to create a need for responsive media query code in my CSS, as the primary focus of Project 2 is JavaScript. The current site was built to remain responsive across different devices and screen sizes without relying on these.
+
+5. Sound effects were chosen as a means of communicating a correctly or incorrectly chosen answer, in addition to a displayed alert message. As a stylistic choice, the sound effects could prove amusing or irritating based on the user's personality and current temperament, in as much as somone may find Waluigi himself irritating or amusing.
+
 ## Project Wireframe - Balsamiq
 
 The project wireframe can be found here:
@@ -37,12 +67,20 @@ This project consists of two pages. The quiz page is accessed by a button link a
 
 ### Quiz
 
-- Details of two extended walking trips are included on this page to communicate the scope of the activities of the group. Large images are included as part of the trip outline. Hiking groups that have been or are local to me have ran trips of a similiar nature before, and I sought to repliacte that with this page.
+- On the page loading, the quiz interface can be seen. One of three possible answers can be chosen via button click; once a click is made, a choice is committed, and feedback for a right or wrong answer is given via the appropriate alert message and sound effect. A score box displays the number of questions answered correctly.
+- After all the questions have been answered, the quiz interface disapperas, and a final score message and display is revealed to the user. A button to take the user back to the homepage is revealed as well.
 
-### Join Us
+### Features Not Implemented/For Future Consideration
 
-- Contains a form that users must fill in to become a group member. All fields must be filled in and the final checkbox must be left selected or unselected. At larger screen sizes, a silhouette of an individual in a wheelchair can be seen.
+- It is possible to format my quiz as it functions onto one page rather than separating it from the introductory image and information as I have done here. A future edit to the project by msyelf would focus on this first.
 
+- I considered the use of Modal Messages instead of the alert function for displaying the right answer and wrong answer messages for the quiz. They represent better UI design than alert messages; however, inexperience and being slow in my learning of some elements of JavaScript prevented me from implementing this feature for the project.
+
+- The quiz section has a piece of text that displays 'Question'. It indicates to the user that the text following represents a question. There is no other function or intended purpose for this text element.  Making this text update based on the current question number would heighten the interactive nature of the quiz.
+
+- I considered including a greater number of questions for the quiz as a whole, only for the quiz to randomly select from the question pool and finish after a fixed number of questions have been answered. I was unable to figure out the JavaScript code that would allow this to happen during the project, prior to submission.
+
+- The means by which a new question on my quiz loads in is static; the previous question and the text inside the buttons is immediately replaced with new sets of text instantly. It would be possible to make questions fade into view or appear/disappear by sliding across the screen. [This quiz template](https://codepen.io/SitePoint/pen/GmPjjL) demonstrates the sliding effect, and was considered as a base template for my quiz before I ultmiately decided against it.
 
 ## Technologies and Sites Used
 
@@ -65,11 +103,21 @@ This project consists of two pages. The quiz page is accessed by a button link a
 - [Nintendo](https://www.nintendo.com/whatsnew/play-as-waluigi-in-these-wah-nderful-games/)
     * The homepage image of Waluigi was sourced from here.
 - [101Soundboards](https://www.101soundboards.com/boards/10072-waluigi-sounds-mario-kart-wii)
-    * The two sound effects used from the quiz were sourecd from this page.
+    * Two sound effects used for the quiz were sourced from this page.
 - ["Random quiz"](https://codepen.io/savant/pen/gbaveO)
     * The base structure of the quiz was derived from this template and then modified significantly to suit the needs of the project.
 
 ## Testing
+
+## Fulfilling User Stories
+
+With reference to the user stories above:
+
+1. The quiz contains various questions that depict Waluigi's 20+ year history, and these are of varying specificity, whether it be the nature of his first Mario Kart vehicle or his very first appearance in a game. Should a user get a question wrong, the ability to repeat the quiz will ensure certain information becomes salient, if the user wishes it.
+
+2. The quiz covers various different Nintendo spin-off games, most of which feature Waluigi (notably, one question makes reference to a title made conspicuous by his absence). Anyone who has engaged intently with many of these games should find these questions interesting and challenging.
+
+3. That JavaScript allows sound files to be played at specific moments is, in my opinion, an amazing function. To be able to play one of Waluigi's infamous screeches and wails based on whether the user answers a question correctly or incorrectly lends the quiz a unique personality, and is likely what this user was hoping for in starting the quiz. Waluigi would certainly yell in happiness if you got a question about him right, as would he wail in surprise if you got a question wrong! I believe the colour scheme of the site would also contribute to the fun, as it is a match for most of his design appearance, though the user may not be consciously aware of this at the time.
 
 ### Validator Testing
 
@@ -104,15 +152,19 @@ I manually tested the project via the following methods:
 
 ## JavaScript Testing
 
-The quiz relies on button clicks to cause the quiz to progress, and I ensured a debugger function was a part of the JavaScript code as a prompt for me to investigate at what stage issues might have occured after an answer was clicked No issues were directly flagged as a result of a button press not working; instead, I found there were problems with the logic of the quiz itself.
+The quiz relies on button clicks to cause the quiz to progress, and I ensured a debugger function was a part of the JavaScript code as a prompt for me to investigate at what stage issues might have occured after an answer was clicked. No issues were directly flagged as a result of a button press not working; instead, I found there were problems with the logic of the JavaScript code itself.
 
 I called upon Code Institute's Tutor Assistance service to reslove an issue I had with the quiz functioning correctly - see issues/bugs below. This method was sucessful in resolving the issue. Prior to this, I asked a friend and software tester to troubleshoot this issue, unsuccessfully. A post asking for assistance on Stack Overflow was also unsuccessful.
+
+After the issue was resolved, tbe quiz functioned as intended when using debug mode and as part of normal site testing using a preview broswer window.
 
 ### Issues/Bugs
 
 - A major issue in establishing the correct functioning of the quiz was ensuring the successful generation of a random question through carefully defining JavaScript functions in my code; often, the quiz would repeat the same question infinitely and not generate a new question but a correct answer would cause an uptick in the score to occur. The central issue had to be resolved through Tutor Assistance, who successfully identified several instances of incorrectly defined function parameters. Where '()' parentheses are required for defining functions properly, other functions would need to be referred to inside the parentheses to generate the desired effect. As some of my functions were missing these references, the quiz would not work as intended.
+
 - When testing the site using Firefox Developer Tools, the homepage flags up an Uncaught TypeError: "document.getElementById(...) is null", referring to lines 18 and 19 of the JavaScript code. This error is not detrimental to the functionality of the site.
-- I added a PDF file for the wireframe and responsiveness image to the online respository before adding it to the local one. This created issues with pushing changes from the local repository, and attempts to pull from the main branch to the local one did not work. I decided to remove the files from the main branch and add them to the local repository to resolve this issue. The files were successfully pushed as art of the next commit.
+
+- I added a PDF file for the wireframe and a responsiveness image to the online respository before adding it to the local one. This created issues with pushing changes from the local repository, and attempts to pull from the main branch to the local one did not work. I decided to remove the files from the main branch and add them to the local repository to resolve this issue. The files were successfully pushed as art of the next commit.
 
 ## Deployment
 
@@ -123,6 +175,14 @@ I called upon Code Institute's Tutor Assistance service to reslove an issue I ha
 3. I selected "Deploy from a branch" under the "Source" drop-down menu.
 4. Using two drop-down menus, I ensured my site was to be built from the 'main' branch and the '/ (root)' folder.
 5. My site was deployed to GitHub Pages after a few minutes, allowing me to share the live site to others.
+
+### Project Cloning
+
+Users are free to clone this repository for their own use, so long as permission is obtained from me beforehand.
+
+I am also open to the idea of collaborating to improve the site further.
+
+Should either personal use of the site or collaboration be desired, please contact me at *jonathanslack89@ymail.com*. 
 
 ## Credits
 
@@ -140,7 +200,7 @@ The homepage image of Waluigi was sourced from the following link:
 
 [waluigi.avif](https://www.nintendo.com/whatsnew/play-as-waluigi-in-these-wah-nderful-games/)
 
-The favicon image for the site was sourced from (https://play.nintendo.com/themes/friends/waluigi/) and converted to favicon style [here](https://favicon.io/favicon-converter/).
+The favicon image for the site was sourced from [Nintendo's site](https://play.nintendo.com/themes/friends/waluigi/) and converted to favicon style [here](https://favicon.io/favicon-converter/).
 
 The sound effects played when a right answer or wrong answer is chosen were sourced from [101soundboards](https://www.101soundboards.com/boards/10072-waluigi-sounds-mario-kart-wii). Specifically, sound effects labelled '19' and '27' were chosen for the project.
 
