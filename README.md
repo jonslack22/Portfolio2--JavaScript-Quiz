@@ -10,10 +10,109 @@ Though a dedicated page detailing Waluigi's history, inspiration, general inform
 
 This is the second of five projects that comprise the Full Stack Software Development course ran by *Code Institute*. This project required the use of HTML, CSS3 and JavaScript to build a responsive and static website, with manipulation of the HTML Document Model (DOM) as a mandatory requirement.
 
+## Project Wireframe - Balsamiq
+
+The project wireframe can be found here:
+
+![The Waluigi Quiz Wireframe](https://github.com/jonslack22/Portfolio2--JavaScript-Quiz/blob/main/Waluigiquiz.pdf)
+
+No code stylings or images were used a spart of the wireframe, and it is not to scale.
+
+## Features
+
+### Basic Features
+
+This project consists of two pages. The quiz page is accessed by a button link and the homepage can be navigated to from the quiz page via a button that appears after the quiz is completed.
+
+### Consistent Features
+
+- A menu header displaying "Welcome to the most WAH-nderful Waluigi Quiz!" at the top of both pages, characterised by a purple background
+- A basic footer on both pages, stylised differently per page.
+
+### Homepage
+
+- An image of Waluigi highlights the homepage. This is followed by some flavour text to generate some intrigue for the quiz.
+- A set of basic instructions for the quiz are included here.
+- A button that takes you to the quiz page
+
+### Quiz
+
+- Details of two extended walking trips are included on this page to communicate the scope of the activities of the group. Large images are included as part of the trip outline. Hiking groups that have been or are local to me have ran trips of a similiar nature before, and I sought to repliacte that with this page.
+
+### Join Us
+
+- Contains a form that users must fill in to become a group member. All fields must be filled in and the final checkbox must be left selected or unselected. At larger screen sizes, a silhouette of an individual in a wheelchair can be seen.
+
+
+## Technologies and Sites Used
+
+- HTML5
+    * The primary coding language used to create the site's text content.
+- CSS3
+    * The language used to style the HTML elements, buttons and colour schemes of the site's pages.
+- JavaScript
+    * The language used to generate the backbone of the quiz and make certain elements play and disappear at the appropriate times.   
+- [Balsamic](https://balsamiq.com/)
+    * The wireframe building website I used for the project. I used the downloadable application version of Balsamic to create my wireframe, then I exported it to gitPod as a PDF file.
+- [Google Fonts](https://fonts.google.com)
+    * The three different font-families used for the project, Permanent Marker, Poor Story and Rubik, were sourced from here.
+- [W3C Markup Validation Service](https://validator.w3.org/)
+    * Both my HTML and CSS code received validation several times over the last few days before project submission. All errors and warnings were resolved.
+- [W3C Schools](https://www.w3schools.com/)
+    * I consulted this website multiple times for a large variety of different reasons, including how to properly play audio files under given timings and make proper reference to localStorage to save quiz scores locally.
+- [stackoverflow](https://stackoverflow.com/)
+    * I created a post on stack overflow [here](https://stackoverflow.com/questions/74292030/what-is-the-correct-syntax-for-my-if-logic-in-my-javascript-code-if-there-is-n?noredirect=1#comment131160164_74292030) to initially ask for help in resolving a major functionality issue with my quiz. The issue proved to run deeper than what was suggested in the answers, and is referred to in the testing section below.                               
+- [Nintendo](https://www.nintendo.com/whatsnew/play-as-waluigi-in-these-wah-nderful-games/)
+    * The homepage image of Waluigi was sourced from here.
+- [101Soundboards](https://www.101soundboards.com/boards/10072-waluigi-sounds-mario-kart-wii)
+    * The two sound effects used from the quiz were sourecd from this page.
+- ["Random quiz"](https://codepen.io/savant/pen/gbaveO)
+    * The base structure of the quiz was derived from this template and then modified significantly to suit the needs of the project.
+
+## Testing
+
+### Validator Testing
+
+No issues were found via HMTL validator testing on the quiz page. Three duplicate id elements on the homepage were flagged as warnings and errors (and subsequently fixed) through HTML validator testing. Both pages were tested at the following link:
+
+[HTML - W3C Markup Validation Service](https://validator.w3.org/nu/)
+
+No issues were found through CSS Validator testing on 11/10/22 at the following link:
+
+[CSS - W3C Markup Validation Service](https://jigsaw.w3.org/css-validator/)
+
+Validator testing for the JavaScript code highlights one undefined variable, 'randomQuestion', referred to three times in the code. There are three variables, "answerA_clicked" "answerB_clicked" and "answerC_clicked" that go unusued beyond their use as individual functions. This was intentional on my part.
+
+11 warnings are generated. 10 refer to my use of the 'let' variable as part of Mozilla Firefox JS extensions and ES6. The 11th warning refers to an expression on line 72, where an assignment or function call would be expected; instead an expression is used. This was intentional on my part.
+
+Testing was conducted at the following link:
+
+[JSHint, a community tool that detects errors and potential problems in Javascript code](https://jshint.com/)
+
+## Browser Testing
+
+The website was tested on the following broswers via desktop and mobile to ensure the structure of the site works as intended:
+
+- Mozilla Firefox
+- Google Chrome
+
+## Responsiveness Testing
+
+I manually tested the project via the following methods:
+
+- Using Firefox Developer Tools and Chrome Developer Tools during mentor sessions to view each page at different screen sizes;
+
+## JavaScript Testing
+
+The quiz relies on button clicks to cause the quiz to progress, and I ensured a debugger function was a part of the JavaScript code as a prompt for me to investigate at what stage issues might have occured after an answer was clicked No issues were directly flagged as a result of a button press not working; instead, I found there were problems with the logic of the quiz itself.
+
+I called upon Code Institute's Tutor Assistance service to reslove an issue I had with the quiz functioning correctly - see issues/bugs below. This method was sucessful in resolving the issue. Prior to this, I asked a friend and software tester to troubleshoot this issue, unsuccessfully. A post asking for assistance on Stack Overflow was also unsuccessful.
+
 ### Issues/Bugs
 
-- A major issue in establishing the correct functioning of the quiz was ensuring the successful generation of a random question through carefully defining JavaScript functions in my code. The central issue had to be resolved through Tutor Assistance, who successfully identified several instances of incorrectly defined function parameters. Where '()' parentheses are required for defining functions properly, other functions would need to be referred to inside the parentheses to generate the desired effect. As some of my functions were missing these references, the quiz would not work as intended.
+- A major issue in establishing the correct functioning of the quiz was ensuring the successful generation of a random question through carefully defining JavaScript functions in my code; often, the quiz would repeat the same question infinitely and not generate a new question but a correct answer would cause an uptick in the score to occur. The central issue had to be resolved through Tutor Assistance, who successfully identified several instances of incorrectly defined function parameters. Where '()' parentheses are required for defining functions properly, other functions would need to be referred to inside the parentheses to generate the desired effect. As some of my functions were missing these references, the quiz would not work as intended.
 - When testing the site using Firefox Developer Tools, the homepage flags up an Uncaught TypeError: "document.getElementById(...) is null", referring to lines 18 and 19 of the JavaScript code. This error is not detrimental to the functionality of the site.
+- I added a PDF file for the wireframe and responsiveness image to the online respository before adding it to the local one. This created issues with pushing changes from the local repository, and attempts to pull from the main branch to the local one did not work. I decided to remove the files from the main branch and add them to the local repository to resolve this issue. The files were successfully pushed as art of the next commit.
 
 ## Deployment
 

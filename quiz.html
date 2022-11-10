@@ -16,30 +16,30 @@
       <div id="quiz"> <!--This element is visible by default until all questions are answered --> 
         <div class="flex">
           <div class="field">Score</div>
-            <div id="score" class="field">0</div>
+            <div id="score" class="field">0</div> <!--The current score display-->
         </div>
         <div class="flex">
           <div class="field">Question</div>
             <div id="question" class="field"></div>
         </div>
         <div class="flex">
-          <div class="field">A</div>
+          <div class="field">A</div> <!--Each clickable answer button-->
             <button id="answerA" onclick="answerA_clicked()"></button>
         </div>
         <div class="flex">
-          <div class="field">B</div>
+          <div class="field">B</div> <!--Each clickable answer button-->
             <button id="answerB" onclick="answerB_clicked()"></button>
         </div>
         <div class="flex">
-          <div class="field">C</div>
+          <div class="field">C</div> <!--Each clickable answer button-->
             <button id="answerC" onclick="answerC_clicked()"></button>
         </div>
       </div>
     </main>  
-    <audio id="rightAudio">
+    <audio id="rightAudio"> <!--A sound that plays with the right answer-->
       <source src="assets/sounds/waluigi1.mp3" type="audio/mpeg">
     </audio>
-    <audio id="wrongAudio">
+    <audio id="wrongAudio"> <!--A sound that plays with a wrong answer-->
       <source src="assets/sounds/waluigi2.mp3" type="audio/mpeg">
     </audio>     
          <div id ="quizscore"> <!--This element will take the place of the quiz after all questions are answered -->
@@ -49,7 +49,7 @@
             <h2 id="finalscore">Total Score = 0</h2>
             <h2>Be sure to tell your friends about this WAH-nderful quiz!</h2>    
         </div>
-        <button id="tohomepage" onclick="document.location='index.html'">Home</button>
+        <button id="tohomepage" onclick="document.location='index.html'">Home</button> <!--A button to take you back to the homepage, allowing you to repeat the quiz if you wish-->
         <footer id="quiz-footer">The Waluigi Quiz 
           by Jonathan Slack, 2022
         </footer>
